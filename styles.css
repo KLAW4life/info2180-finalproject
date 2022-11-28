@@ -1,10 +1,39 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+html, body{
+    height: 100%;
+}
+
+body{
     font-size: 18px;
     color: #2D3748;
     font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
+    display: flex;
+    background:linear-gradient(to bottom, #7FFFD4, #00FFFF, #003554);
+    flex-direction: column;
+    align-items: center;
 }
-    
-    
+
+header .container{
+    display: flex;
+    color: black;
+    font-size: 30px;
+    padding: 1rem;
+}
+
+header img{
+    width: 100px;
+}
+
+.content{
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    color: white;
+}
+
     /*Kevin */
 
 
@@ -16,7 +45,76 @@
 
     /* Peter */
 
+    .login-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem;
+        width:450px;
+        background: #67AAF9;
+        font-family: 'Barlow', sans-serif;
+        color: #040F0F;
+        border-radius: 10px;    ;
+        -webkit-border-radius: 10px    ;
+        -moz-border-radius: 10px    ;
+        -ms-border-radius: 10px    ;
+        -o-border-radius: 10px    ;
+    }
 
+    .login-input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span{
+        padding-right: 5px;
+    }
+
+    .login-card input{
+        border: none;
+        outline: none;
+        padding: 1rem;
+        padding-right: 8rem;
+        background: rgba(255,255,255, .3);
+        width: 100%;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+    }
+
+    .login-card input:focus {
+        background: rgba(255,255,255, .5);
+    }
+    
+    .login-card button{
+        border: none;
+        padding: 1rem;
+        width: 50%;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+    }
+
+    .login-card button:hover{
+        cursor: pointer;
+    }
+
+    .login-header h1{
+        font-size: 2.5rem;
+    }
+
+    .login-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
 
 
     /*Kerene*/
