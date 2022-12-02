@@ -1,0 +1,24 @@
+header{
+    display: flex;
+    background-color: aqua;
+}
+
+img{
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1{
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body .viewContainer{
+    padding-top: 20px;
+}
+
+body .viewContainer .buttons{
+    float: right;
+}
+
