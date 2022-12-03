@@ -14,6 +14,7 @@ CREATE TABLE Users(
 );
 
 
+
 CREATE TABLE Contacts(
 	id int IDENTITY(1,1),
 	title varchar(5),
