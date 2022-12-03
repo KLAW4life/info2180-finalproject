@@ -92,6 +92,7 @@ header img{
     .login-card button{
         border: none;
         padding: 1rem;
+        background: #F8F4F9;
         width: 50%;
         border-radius: 100px;
         -webkit-border-radius: 100px;
@@ -101,7 +102,9 @@ header img{
     }
 
     .login-card button:hover{
+        background: #2D3748;
         cursor: pointer;
+        color: #F8F4F9;
     }
 
     .login-header h1{
