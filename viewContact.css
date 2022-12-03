@@ -6,13 +6,23 @@
 }
 header{
     display: flex;
-    background-color: aqua;
+    background-color: rgb(3, 123, 123);
 }
 
-img{
+.banner img{
     width: 25px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.notesHeading img{
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.notesHeading{
+    display: flex;
 }
 
 h1{
@@ -24,12 +34,15 @@ body .viewContainer{
     padding-top: 20px;
 }
 
-body .viewContainer .buttons{
-    float: right;
+body .viewContainer .buttonsAndProfile{
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    
+    
+
 }
 .assign{
     background-color: yellow;
-    padding: 5px 5px 5px 5px;
     border-radius: 5px;
     border-color: yellow;
 }
@@ -73,21 +86,33 @@ body .viewContainer .buttons{
 }
 
 #notesHeading{
-    margin-left: 10px;
+    margin-left: 3px;
 }
 
 #noteInput{
     padding-bottom: 150px;
     margin-bottom: 10px;
     width: 100%;
+    border-radius: 5px;
+    border-style: none;
+    
+}
+
+.viewNotes{
+    padding-top: 125px;
+    padding-bottom: 125px;
 }
 
 .addNotes{
-    padding-top: 250px;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 10px; 
+    padding-bottom: 20px;
 }
 
+.addNoteContainer{
+
+    background-color: rgb(217, 215, 215);
+}
 
