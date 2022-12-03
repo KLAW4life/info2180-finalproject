@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
 
-html, body{
-    height: 100%;
-}
-
 body{
+    height: 100vh;
+    margin: 0px;
     font-size: 18px;
     color: #2D3748;
     font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
@@ -52,7 +50,7 @@ header img{
         justify-content: center;
         padding: 4rem;
         width:450px;
-        background: #67AAF9;
+        background: #508CA4;
         font-family: 'Barlow', sans-serif;
         color: #040F0F;
         border-radius: 10px;    ;
