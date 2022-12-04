@@ -13,6 +13,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
     background:linear-gradient(to bottom, #7FFFD4, #00FFFF,#003554);
 }
+
 .mainContent {
     display: flex;
 }
@@ -20,29 +21,25 @@ body{
 .mainContent .viewContainer{
     background: #508CA4;
     width: 100%;
-}
-
-.dashboard{
-    padding: 2rem;
-    padding-top: 1rem;
-}
-
-.dashboard-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-bottom: 5px;
+    
 }
 
 .sidebar{
-    width: 300px;
-    height: 100%;
+    width: 360px;
     background: #F8F4F9;
 
+}
+
+.profile{
+    display: flex;
 }
 .sidebar.span{
     padding-right: 5px;
 }
-
+p{
+    font-size: 12px;
+}
 .side-button{
     display: flex;
     align-items: center;
@@ -75,9 +72,8 @@ header{
 }
 
 .banner img{
-    width: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 50px;
+   
 }
 
 .notesHeading img{
@@ -102,8 +98,12 @@ body .viewContainer .buttonsAndProfile{
     display: grid;
     margin-left: 10px;
     margin-right: 10px;
-    grid-template-columns: 65% 15% 15%;
+    grid-template-columns: 70% 15% 15%;
     
+}
+.profile img{
+    margin-right: 15px;
+    width: 10%
 }
 
 .assign{
@@ -120,7 +120,17 @@ body .viewContainer .buttonsAndProfile{
     color: #F8F4F9;
     border-color: #67AAF9;
     font-weight: bold;
+   
 }
+.Add{
+    background-color: #67AAF9;
+    border-radius: 5px;
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
+    width:20%
+}
+
 
 .contactDetails{
     border-style: solid;
@@ -143,9 +153,12 @@ body .viewContainer .buttonsAndProfile{
 
 .contactDetails h3{
     font-size: 14px;
-    margin-left: 20px;
-    padding-top: 20px;
     
+    
+}
+.details{
+    margin-left: 20px;
+    padding-top: 20px; 
 }
 
 .notes{
