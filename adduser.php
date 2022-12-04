@@ -44,38 +44,38 @@ session_start();
                     </li>
                 </nav>
             </div>
-            <div class="wrapper">
-            <h2>New User</h2>
-            <form id = "adduser" method="post" action="add_dbuser.php">
-                <div class="form-group">
-                    <label>First Name</label>
-                    <input type="text" name="fname" id="fname" placeholder="Jane" required> 
-                </div>    
-                <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" name="lname" id="lname" placeholder="Doe" required> 
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" name="email" id="email" placeholder="name@email.com" required> 
-                </div> 
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="text" name="pword" id="pword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required 
-                    oninvalid="this.setCustomValidity('Password must be at least 8 characters in length and must contain at least one number and one upper case letter.')">
-                </div> 
-                <div class="form-group">
-                    <label>Role</label>
-                    <select name="role"> 
-                        <option value="member">Member</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                </div>              
-                <div class="form-group">
-                    <button type="submit" id="savebtn" name = "savebtn" >Save</button>
-                </div>
-            </form>
-        </div>    
+            <div class="form-content">
+                <h1>New User</h1>
+                <form id = "adduser" method="post" action="add_dbuser.php">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="fname" id="fname" placeholder="Jane" required> 
+                    </div>    
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lname" id="lname" placeholder="Doe" required> 
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" id="email" placeholder="something@email.com" required> 
+                    </div> 
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" name="pword" id="pword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required 
+                        oninvalid="this.setCustomValidity('Password must be at least 8 characters in length and must contain at least one number and one upper case letter.')">
+                    </div> 
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select name="role"> 
+                            <option value="member">Member</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>              
+                    <div class="form-group">
+                        <button type="submit" id="savebtn" name = "savebtn" >Save</button>
+                    </div>
+                </form>
+            </div>    
         </div>
         <footer class="footer">
             <div class="container">
