@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,35 @@
     <script src="viewContact.js"></script>
 </head>
 <body>
-    <section class = "mainContent"></section>
+    <section class = "bannerSection"></section>
         <header class = "banner">
             <img src="dolphin-svgrepo-com.svg" alt="logo">
             
             <h1>Dolphin CRM</h1>
         </header>
-
-        <section class = "viewContainer">
+    <section class = "mainContent">
+        <div class="sidebar">
+            <nav>
+                <li class="side-button">
+                    <span class="material-symbols-rounded">home</span>
+                    <p>Home</p>
+                </li>
+                <li class="side-button">
+                    <span class="material-symbols-rounded">person_add</span>
+                    <p>New Contact</p>
+                </li>
+                <li class="side-button">
+                    <span class="material-symbols-rounded">group</span>
+                    <p>Users</p>
+                </li>
+                <hr>
+                <li class="side-button">
+                    <span class="material-symbols-rounded">power_settings_new</span>
+                    <p>Logout</p>
+                </li>
+            </nav>
+        </div>
+        <div class = "viewContainer">
             <div class = "buttonsAndProfile">
                 <img src ="Circle-icons-profile.svg.png" alt = "profileImage">
                 <button class="assign">Assign to me</button>

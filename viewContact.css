@@ -1,12 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
 *{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 
 }
+
+body{
+    font-size: 18px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
+    background:linear-gradient(to bottom, #7FFFD4, #00FFFF,#003554);
+}
+.mainContent {
+    display: flex;
+}
+
+.mainContent .viewContainer{
+    background: #508CA4;
+    width: 100%;
+}
+
+.dashboard{
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.dashboard-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    background: #F8F4F9;
+
+}
+.sidebar.span{
+    padding-right: 5px;
+}
+
+.side-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #2D3748;
+}
+
+.side-button:hover{
+    background: #2D3748;
+    cursor: pointer;
+    color: #F8F4F9;
+}
+
+.sidebar span{
+    padding-right: 5px;
+}
+
+.sidebar hr{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 header{
     display: flex;
-    background-color: rgb(3, 123, 123);
+    font-size: 15px;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
 }
 
 .banner img{
@@ -17,7 +82,7 @@ header{
 
 .notesHeading img{
     width: 20px;
-    margin-left: 10px;
+    margin-left: 10px; 
     margin-right: 10px;
 }
 
@@ -27,7 +92,6 @@ header{
 
 h1{
     font-size: 18px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body .viewContainer{
@@ -36,41 +100,48 @@ body .viewContainer{
 
 body .viewContainer .buttonsAndProfile{
     display: grid;
-    grid-template-columns: 80% 10% 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 65% 15% 15%;
     
-    
-
 }
+
 .assign{
-    background-color: yellow;
+    background-color: #67AAF9;
     border-radius: 5px;
-    border-color: yellow;
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
 }
 
 .switch{
-    background-color: rgb(13, 149, 13);
-    padding: 5px 5px 5px 5px;
+    background-color: #67AAF9;
     border-radius: 5px;
-    border-color: rgb(13, 149, 13);
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
 }
 
 .contactDetails{
     border-style: solid;
     margin-top: 50px;
-    border-width: thin;
+    border-style: none;
     border-radius: 8px;
     margin-bottom: 35px;
+    margin-left: 10px;
+    margin-right:10px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     column-gap: 300px;
     row-gap: 30px;
     padding-bottom: 50px;
+    background: #F8F4F9;
+
     
 }
 
 .contactDetails h3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     margin-left: 20px;
     padding-top: 20px;
@@ -78,11 +149,13 @@ body .viewContainer .buttonsAndProfile{
 }
 
 .notes{
-    border-style: solid;
-    border-width: thin;
+    border-style: none;
     border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
+    background-color: #F8F4F9;;
 }
 
 #notesHeading{
@@ -111,8 +184,4 @@ body .viewContainer .buttonsAndProfile{
     padding-bottom: 20px;
 }
 
-.addNoteContainer{
-
-    background-color: rgb(217, 215, 215);
-}
 
