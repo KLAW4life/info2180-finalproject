@@ -1,0 +1,120 @@
+.container{
+    font-size: 18px;
+    color: #2D3748;
+    width:100%;
+    font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
+}
+    
+    
+    /*Kevin */
+
+
+    
+
+    /*Kimberly */
+
+
+
+    /* Peter */
+
+
+
+
+    /*Kerene*/
+
+
+
+
+    /*Shantay*/
+
+header{
+    background-color: #2D3748;
+    color: white;
+    padding:15px;
+    font-size: 16px;
+}
+
+#resultCon{
+    display: flex;
+    width:100%;
+}
+
+
+
+#resultAside button{
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}
+
+#resultAside{
+    float:left;
+    width: 10%;
+    padding: 15px;
+}
+
+#resultAside button:hover{
+    background-color: #E8E8E8;
+}
+
+#viewUserList{
+    display: none;
+    width: 20%;
+}
+
+#userListDiv{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#userListDiv button{
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+#userListDiv button:hover{
+    background-color: darkblue;
+}
+
+
+#result{
+    float: right;
+    width:90%;
+    background-color: #E8E8E8;
+    padding: 10px;
+}
+
+#resultspace{
+    visibility:hidden;
+    background-color: white;
+    padding: 10px;
+}
+
+#uTable{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#uTable td, #uTable th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#uTable tr:nth-child(even){background-color: white;}
+#uTable tr:nth-child(odd){background-color:ghostwhite}
+
+#uTable th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #E8E8E8;
+    color: black;
+}
