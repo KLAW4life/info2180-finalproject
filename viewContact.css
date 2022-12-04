@@ -1,24 +1,200 @@
-header{
-    display: flex;
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+
 }
 
-img{
-    width: 40px;
-    margin-left: 10px;
+body{
+    font-size: 18px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
+    background:linear-gradient(to bottom, #7FFFD4, #00FFFF,#003554);
+}
+
+.mainContent {
+    display: flex;
+}
+
+.mainContent .viewContainer{
+    background: #508CA4;
+    width: 100%;
+    padding-bottom: 5px;
+    
+}
+
+.sidebar{
+    width: 360px;
+    background: #F8F4F9;
+
+}
+
+.profile{
+    display: flex;
+}
+.sidebar.span{
+    padding-right: 5px;
+}
+p{
+    font-size: 12px;
+}
+.side-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #2D3748;
+}
+
+.side-button:hover{
+    background: #2D3748;
+    cursor: pointer;
+    color: #F8F4F9;
+}
+
+.sidebar span{
+    padding-right: 5px;
+}
+
+.sidebar hr{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+header{
+    display: flex;
+    font-size: 15px;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.banner img{
+    width: 50px;
+   
+}
+
+.notesHeading img{
+    width: 20px;
+    margin-left: 10px; 
     margin-right: 10px;
 }
 
+.notesHeading{
+    display: flex;
+}
+
 h1{
-    font-size: 25px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
 }
 
 body .viewContainer{
     padding-top: 20px;
 }
 
-body .viewContainer .buttons{
-    float: right;
+body .viewContainer .buttonsAndProfile{
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 70% 15% 15%;
+    
 }
+.profile img{
+    margin-right: 15px;
+    width: 10%
+}
+
+.assign{
+    background-color: #67AAF9;
+    border-radius: 5px;
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
+}
+
+.switch{
+    background-color: #67AAF9;
+    border-radius: 5px;
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
+   
+}
+.Add{
+    background-color: #67AAF9;
+    border-radius: 5px;
+    color: #F8F4F9;
+    border-color: #67AAF9;
+    font-weight: bold;
+    width:20%
+}
+
+
+.contactDetails{
+    border-style: solid;
+    margin-top: 50px;
+    border-style: none;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    margin-left: 10px;
+    margin-right:10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 300px;
+    row-gap: 30px;
+    padding-bottom: 50px;
+    background: #F8F4F9;
+
+    
+}
+
+.contactDetails h3{
+    font-size: 14px;
+    
+    
+}
+.details{
+    margin-left: 20px;
+    padding-top: 20px; 
+}
+
+.notes{
+    border-style: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #F8F4F9;;
+}
+
+#notesHeading{
+    margin-left: 3px;
+}
+
+#noteInput{
+    padding-bottom: 150px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border-style: none;
+    
+}
+
+.viewNotes{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.addNotes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px; 
+    padding-bottom: 20px;
+}
+
 

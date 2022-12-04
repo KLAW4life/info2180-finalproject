@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
 
-html, body{
-    height: 100%;
-}
-
 body{
+    height: 100vh;
+    margin: 0px;
     font-size: 18px;
     color: #2D3748;
     font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
@@ -31,7 +29,7 @@ header img{
 
 .footer {
     flex-shrink: 0;
-    color: white;
+    color: #F8F4F9;
 }
 
     /*Kevin */
@@ -53,7 +51,7 @@ header img{
         justify-content: center;
         padding: 4rem;
         width:450px;
-        background: #67AAF9;
+        background: #508CA4;
         font-family: 'Barlow', sans-serif;
         color: #040F0F;
         border-radius: 10px;    ;
@@ -94,6 +92,7 @@ header img{
     .login-card button{
         border: none;
         padding: 1rem;
+        background: #F8F4F9;
         width: 50%;
         border-radius: 100px;
         -webkit-border-radius: 100px;
@@ -103,7 +102,9 @@ header img{
     }
 
     .login-card button:hover{
+        background: #2D3748;
         cursor: pointer;
+        color: #F8F4F9;
     }
 
     .login-header h1{

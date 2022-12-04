@@ -1,3 +1,23 @@
+<?php
+session_start();
+$host = 'localhost';
+$username = 'finalproj_user';
+$password = 'password123';
+$dbname = 'dolphin_crm2';
+
+// $_GET["id"]
+$contId = "1";
+// $userId = $_SESSION["id"];
+$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+$stmt = $conn->query("SELECT title, firstname, lastname, email, company, telephone, assigned_to, created_by, created_at, updated_at FROM Contacts WHERE id = $contId");
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+// $stmt = $conn->query("SELECT created_by, comment FROM Notes WHERE id = $userId");
+// $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +61,15 @@
         </div>
         <div class = "viewContainer">
             <div class = "buttonsAndProfile">
-                <img src ="Circle-icons-profile.svg.png" alt = "profileImage">
+                <div class = "profile">
+                    <img src ="Circle-icons-profile.svg.png" alt = "profileImage">
+                    <div class = "continfo">
+                        <?php
+                        echo "<p>".$results['title']." ".$results['firstname']. " ".$results['lastname']. "</p>";
+                        echo "<p>Created on ".$results['created_at']." by ". $results['created_by']."</p>";
+                        echo "<p>Updated on ".$results['updated_at']."</p>";?>
+                    </div>
+                </div>
                 <button class="assign">Assign to me</button>
                 <button class="switch">Switch to Sales Lead</button>
             </div>
@@ -49,10 +77,26 @@
 
             </div>
             <div class ="contactDetails">
-                <h3>Email</h3>
-                <h3>Company</h3>
-                <h3>Telephone</h3>
-                <h3>Assigned to</h3>
+                <div class = "details">
+                    <h3>Email</h3>
+                    <?php
+                    echo "<p>".$results['email']."</p>";?>
+                </div>
+                <div class = "details">
+                    <h3>Company</h3>
+                    <?php
+                    echo "<p>".$results['company']."</p>";?>
+                </div>
+                <div class = "details">
+                    <h3>Telephone</h3>
+                    <?php
+                    echo "<p>".$results['telephone']."</p>";?>
+                </div>
+                <div class = "details">
+                    <h3>Assigned to</h3>
+                    <?php
+                    echo "<p>".$results['assigned_to']."</p>";?>
+                </div>
             </div>
             <div class = "notes">
                 <div class = "notesHeading">
@@ -67,6 +111,7 @@
                     <div class = "addNotes">
                         <h3>Add a note about</h3>
                         <input type="note" placeholder="Enter details here" id = "noteInput">
+                        <button class="Add">Add note</button>
                     </div>
                 </div>
             </div>
@@ -74,3 +119,5 @@
         </section>
     </section>
 </body>
+
+
