@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+body{
+    height: 100%;
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans", sansserif;
+    display: flex;
+    background:linear-gradient(to bottom, #7FFFD4, #00FFFF, #003554);
+    flex-direction: column;
+}
+
+header .container{
+    display: flex;
+    font-size: 15px;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+header img{
+    width: 50px;
+}
+
+.main-page{
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+}
+
+.sidebar{
+    width: 360px;
+    background: #F8F4F9;
+}
+
+.side-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #2D3748;
+}
+
+.side-button:hover{
+    background: #2D3748;
+    cursor: pointer;
+    color: #F8F4F9;
+}
+
+.sidebar span{
+    padding-right: 5px;
+}
+
+.sidebar hr{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.content{
+    background: #508CA4;
+    width: 100%;
+}
+
+.new-contact{
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.contact-form{
+    background: #DBD3D8;
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.user-input input, .user-input select{
+    background: #F8F4F9;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.save-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#save-btn {
+    display: flex;
+    align-items: center;
+    background: #67AAF9;
+    color: #F8F4F9;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#save-btn:hover {
+    cursor: pointer;
+    background: #053c7a;
+}
+
+.footer{
+    flex-shrink: 0;
+    color: #F8F4F9;
+    display: flex;
+    justify-content: center;
+}
