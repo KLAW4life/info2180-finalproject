@@ -2,7 +2,7 @@
 
 session_start();
 
-require('adduserconfig.php');
+require 'adduserconfig.php';
 
 $fname_raw = $lname_raw = $email_raw = $pword_raw = "";
 
