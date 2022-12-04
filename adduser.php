@@ -2,37 +2,32 @@
 
 // Include config file
 //require_once "adduser_dbconfig.php";
-$fname = $lname = $email = $pword = $role = "";
+$fname_raw = $lname_raw = $email_raw = $pword_raw = $role = "";
 
 // Processing form data when form is submitted
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if (empty($_POST["fname"])) {
-        $fname = "First name is required";
-    } else {
-        $fname = test_input($_POST["fname"]);
-    }
+    $fname_raw = filt_input($_POST["fname"]);
+    $fname = filter_var($fname_raw, FILTER_SANITIZE_STRING);
 
-    if (empty($_POST["lname"])) {
-        $lname = "Last name is required";
-    } else {
-        $lname = test_input($_POST["lname"]);
-    }
+    $lname_raw = filt_input($_POST["lname"]);
+    $lname = filter_var($lname_raw, FILTER_SANITIZE_STRING);
 
-    if (empty($_POST["email"])) {
-        $email = "Email is required";
-    } else {
-        $email = test_input($_POST["email"]);
-    }
+    $email_raw = filt_input($_POST["email"]);
+    $email = filter_var($email_raw, FILTER_SANITIZE_EMAIL);
 
-    /*
-    if (empty($_POST["pword"])) {
-        $pword = "Password is required";
-    } else {
-        $pword = test_input($_POST["pword"]);
-    }
-    */
+    $pword_raw = filt_input($_POST["pword"]); 
+    $pword = filter_var($pword_raw, FILTER_SANITIZE_STRING);
+    $hashpword = password_hash($pword, PASSWORD_DEFAULT);
+
+  }
+
+function filt_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
   }
 
 ?>
@@ -46,38 +41,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Add New User</title>
     <link href="styles.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="scripts.js" type="text/javascript"></script>
 </head>
     <body>
         <div class="wrapper">
             <h2>New User</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form id = "adduser" method="post">
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" name="fname" placeholder="Jane">
-                    <span class="error">* <?php echo $lname;?></span>
+                    <input type="text" name="fname" placeholder="Jane" required> 
                 </div>    
                 <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" name="lname" placeholder="Doe">
-                    <span class="error">* <?php echo $lname;?></span>
+                    <input type="text" name="lname" placeholder="Doe" required> 
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" placeholder="name@email.com">
-                    <span class="error">* <?php echo $email;?></span>
+                    <input type="text" name="email" placeholder="name@email.com" required> 
                 </div> 
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="text" name="pword">
-                    <span class="error">* <?php echo $pword;?></span>
+                    <input type="text" name="pword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required 
+                    oninvalid="this.setCustomValidity('Password must be at least 8 characters in length and must contain at least one number and one upper case letter.')">
                 </div> 
                 <div class="form-group">
                     <label>Role</label>
                     <select name="role"> 
-                    <option value="member">Member</option>
-                    <option value="admin">Admin</option>
+                        <option value="member">Member</option>
+                        <option value="admin">Admin</option>
                     </select>
                 </div>              
                 <div class="form-group">
