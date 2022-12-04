@@ -4,7 +4,7 @@ function allUsers(){
 
         var filterSpace = document.getElementById("contact-table");
         var httpReq = new XMLHttpRequest();
-        var url = "http://localhost/info2180-finalproject/dash.php";
+        var url = "http://localhost/info2180-finalproject/dashphp/allfilter.php";
 
         httpReq.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE && this.status == 200){
@@ -23,7 +23,7 @@ function salesLeads(){
 
         var filterSpace = document.getElementById("contact-table");
         var httpReq = new XMLHttpRequest();
-        var url = "http://localhost/info2180-finalproject/dash.php";
+        var url = "http://localhost/info2180-finalproject/dashphp/salesfilter.php";
 
         httpReq.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE && this.status == 200){
@@ -42,7 +42,7 @@ function supports(){
 
         var filterSpace = document.getElementById("contact-table");
         var httpReq = new XMLHttpRequest();
-        var url = "http://localhost/info2180-finalproject/dash.php";
+        var url = "http://localhost/info2180-finalproject/dashphp/supportfilter.php";
 
         httpReq.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE && this.status == 200){
@@ -55,12 +55,6 @@ function supports(){
     })
 }
 
-function viewContact(){
-    document.getElementById("view").addEventListener("click", function(event){
-        event.preventDefault();
-        window.location = "viewContact.html";
-    })
-}
 
 function newContact(){
     document.getElementById("contact-btn").addEventListener("click", function(event){
@@ -74,10 +68,18 @@ function newContact(){
     })
 }
 
+function viewContact(){
+    document.getElementById("view").addEventListener("click", function(event){
+        event.preventDefault();
+        window.location = "viewContact.html";
+    })
+}
+
+
 window.addEventListener("DOMContentLoaded", function(){
     allUsers();
     salesLeads();
     supports();
-    viewContact();
     newContact();
+    viewContact();
 })
