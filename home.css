@@ -75,7 +75,7 @@ header img{
     align-items: center;
 }
 
-.contact-btn{
+#contact-btn{
     display: flex;
     align-items: center;
     background: #67AAF9;
@@ -90,12 +90,12 @@ header img{
     -o-border-radius: 5px;
 }
 
-.contact-btn:hover{
+#contact-btn:hover{
     cursor: pointer;
     background: #053c7a;
 }
 
-.contact-btn span{
+#contact-btn span{
     padding-right: 5px;
 }
 
@@ -126,18 +126,78 @@ header img{
     padding-right: 5px;
 }
 
-.filter-section li{
-    list-style-type: none;
-    float: left;
-}
-
-.filter-section li p{
+.filter-section button{
+    background: none;
+    border: none;
     padding: 1rem;
+    font-size: 1rem;
 }
 
-.filter-section li p:hover{
+.filter-section button:hover{
     color: #67AAF9;
     cursor: pointer;
+}
+
+#contact-table{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#contact-table table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#contact-table .contact-name {
+    font-weight: bold;
+}
+
+#contact-table .sales-type{
+    background: #FFD65C;
+    width: fit-content;
+    padding: 3px 7px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#contact-table .support-type{
+    background: #67AAF9;
+    width: fit-content;
+    padding: 3px 7px;
+    font-weight: bold;
+    color: #F8F4F9;
+    border-radius: 3px;
+}
+
+#contact-table #view{
+    color: #67AAF9;
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+#contact-table #view:hover{
+    cursor: pointer;
+}
+
+#contact-table td, th {
+    border: none;
+    padding: 12px;
+}
+
+#contact-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: #508CA4;
+    color: #F8F4F9;
+    font-size: 20px;
+}
+
+#contact-table tr {
+    background-color: #F8F4F9;
 }
 
 .footer{

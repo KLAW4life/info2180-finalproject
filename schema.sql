@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS dolphin_crm2;
 CREATE DATABASE dolphin_crm2;
 USE dolphin_crm2;
 
