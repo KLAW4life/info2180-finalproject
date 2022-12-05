@@ -19,7 +19,7 @@ session_start(); //session starts here
         <div class="content">
             <header class="headerContainer">
                 <div class="container">
-                    <img src="dolphin-svgrepo-com.svg" alt="">
+                    <img src="dolphin-svgrepo-com.svg" alt="Drawing of a Dolphin">
                     <h1>Dolphin CRM</h1>
                 </div>
             </header>
@@ -29,7 +29,7 @@ session_start(); //session starts here
                         <div class="login-header">
                             <h1>Log In</h1>
                         </div>
-                        <form class="login-form" method="post">
+                        <form class="login-form" method="post" action="home.php">
                             <div class="login-input">
                                 <span class="material-symbols-rounded">mail</span>
                                 <input id="email" type="text" placeholder="Email Address">
@@ -63,6 +63,7 @@ if(isset($_POST['login'])){
     $user_pwd = mysqli_real_escape_string($dbcon,$_POST['password']); 
 
     $sql = "SELECT id FROM Users WHERE email = '$user_email' and password = '$user_pwd'";
+    echo "$sql";
 
     $run = mysqli_query($dbcon,$sql);
 
