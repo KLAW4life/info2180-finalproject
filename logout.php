@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-if (session_destroy()){
-    header("location: login.php");
-}
-
+session_destroy();  
+header("Location: login.php"); //redirect to login page  
 ?>

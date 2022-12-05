@@ -30,7 +30,7 @@ if (isset($_POST['savebtn'])){
     //  Mary
     // Jane 
     // mj@gmail.com
-    // D5hjuiyt
+    // M5pwords
 }
 
 function filt_input($data) {

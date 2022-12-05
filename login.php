@@ -1,6 +1,5 @@
 <?php
 session_start(); //session starts here
-
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,6 @@ session_start(); //session starts here
         <link href="styles.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- <script src="login.js" type="text/javascript"></script> -->
     </head>
     <body>
         <div class="content">
@@ -63,7 +61,7 @@ if(isset($_POST['login'])){
     $user_pwd = mysqli_real_escape_string($dbcon,$_POST['password']); 
 
     $sql = "SELECT id FROM Users WHERE email = '$user_email' and password = '$user_pwd'";
-    echo "$sql";
+    echo "<script>alert($sql)</script>";  
 
     $run = mysqli_query($dbcon,$sql);
 
@@ -79,6 +77,5 @@ if(isset($_POST['login'])){
       echo "<script>alert('Email or password is incorrect!')</script>";  
     }  
 }  
-
 
 ?>

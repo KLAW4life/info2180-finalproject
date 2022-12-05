@@ -27,20 +27,20 @@ session_start();
                 <nav>
                     <li class="side-button">
                         <span class="material-symbols-rounded">home</span>
-                        <p>Home</p>
+                        <a href= "home.php">Home</a>
                     </li>
                     <li class="side-button">
                         <span class="material-symbols-rounded">person_add</span>
-                        <p>New Contact</p>
+                        <a href= "">New Contact</a>
                     </li>
                     <li class="side-button">
                         <span class="material-symbols-rounded">group</span>
-                        <p>Users</p>
+                        <a href= "adduser.php">Users</a>
                     </li>
                     <hr>
                     <li class="side-button">
                         <span class="material-symbols-rounded">power_settings_new</span>
-                        <p>Logout</p>
+                        <a href= "logout.php">Logout</a>
                     </li>
                 </nav>
             </div>
