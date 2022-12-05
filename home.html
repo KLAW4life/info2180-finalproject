@@ -1,3 +1,16 @@
+<?php
+session_start();
+$host = 'localhost';
+$username = 'finalproj_user';
+$password = 'password123';
+$dbname = 'dolphin_crm2';
+
+
+$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+$stmt = $conn->query("SELECT title, firstname, lastname, email, company, telephone, assigned_to, created_by, created_at, updated_at FROM Contacts");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,7 +71,7 @@
                                 <button id="assigned">Assigned to Me</button>
                             </div>
                             <div id="contact-table">
-                                <table>
+                                <table name="contactstable">
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
@@ -66,6 +79,19 @@
                                         <th>Type</th>
                                         <th></th>
                                     </tr>
+                                    <?php
+                                    for ($x=0; $x<=count($stmt); $x++){
+                                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[$x];
+                                        echo '<tr>';
+                                        echo '<td>'. $results['firstname'] $results['lastname'].'</td>';
+                                        echo '<td>'. $results['email'] .'</td>';
+                                        echo '<td>'. $results['company'] .'</td>';
+                                        echo '<td>'. $results['type'] .'</td>';
+                                        echo '<td>' <button id="view1" onclick="viewContact()"> View </button>' </td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+
                                 </table>
                             </div>
                         </div>
