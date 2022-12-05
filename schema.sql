@@ -6,7 +6,7 @@ CREATE TABLE `Users`(
 	`id` int NOT NULL AUTO_INCREMENT,
 	`firstname` varchar(25) NOT NULL default '',
 	`lastname` varchar(25) NOT NULL default '',
-	`password` varchar(20) NOT NULL default '',
+	`password` varchar(90) NOT NULL default '',
 	`email` varchar(50) NOT NULL default '',
 	`role` varchar(10) NOT NULL default '',
 	`created_at` datetime,

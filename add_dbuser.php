@@ -1,8 +1,11 @@
 <?php
-
 session_start();
 
-require 'adduserconfig.php';
+$host= 'localhost';
+$username = 'finalproj_user';
+$password = 'password123';
+$dbname = 'dolphin_crm2';
+
 
 $fname_raw = $lname_raw = $email_raw = $pword_raw = "";
 
@@ -23,9 +26,51 @@ if (isset($_POST['savebtn'])){
 
     $role = $_POST["role"];
 
-    $sql = "INSERT INTO Users (fname, lname, hashpword, email, role, created_at) VALUES(?,?,?,?,?,?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$fname,$lname,$hash_password,$email,$role,date("Y-m-d h:i:s")]);
+    date_default_timezone_set('UTC');
+    $datejoined = date('Y-m-d H:i:s');
+
+
+    try {
+      $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $sql = "INSERT INTO Users (firstname, lastname, password, email, role, created_at) VALUES ($fname, $lname, $hashpword, $email, $role, $datejoined)";
+      // use exec() because no results are returned
+      $conn->exec($sql);
+    } catch(PDOException $e) {
+      echo $sql . "<br>" . $e->getMessage();
+    }
+
+    // try{
+
+    //   $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    //   //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //   $sql = "INSERT INTO Users (firstname, lastname, password, email, role, created_at) VALUES ('$fname', '$lname', '$hashpword', '$email', '$role', '$datejoined')";
+    //   $conn->query($sql);
+    //   echo "New record created successfully";
+
+
+    // } catch(PDOException $e) {
+    //   echo $sql . "<br>" . $e->getMessage();
+    // }
+
+
+
+
+    // $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // $sql = "INSERT INTO Users (firstname, lastname, password, email, role, created_at) VALUES($fname,$lname,$hash_password,$email,$role,date("Y-m-d h:i:s")";
+    // // $stmt = $conn->prepare($sql);
+    // $conn->exec($sql);
+    // $stmt->execute([$fname,$lname,$hash_password,$email,$role,date("Y-m-d h:i:s")]);
+    // if (mysqli_query($conn, $sql)) {
+    //   echo "New User Registered Successfully";
+    // } else {
+    //   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // }
+    
+    // mysqli_close($conn);
     
     //  Mary
     // Jane 

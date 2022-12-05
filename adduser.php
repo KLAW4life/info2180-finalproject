@@ -13,7 +13,7 @@ session_start();
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="adduser.js" type="text/javascript"></script>
+        <!-- <script src="adduser.js" type="text/javascript"></script> -->
     </head>
     <body>
         <header class="headerContainer">
