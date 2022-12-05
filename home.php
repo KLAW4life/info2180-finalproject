@@ -35,7 +35,7 @@
                     <hr>
                     <li class="side-button">
                         <span class="material-symbols-rounded">power_settings_new</span>
-                        <p>Logout</p>
+                        <a href= "logout.php">Logout</a>
                     </li>
                 </nav>
             </div>

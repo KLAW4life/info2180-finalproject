@@ -13,7 +13,7 @@ function login(){
             alert("Invalid email address");
         }
         else{
-            window.location = "home.html";
+            window.location = "home.php";
         }
     })
 }
