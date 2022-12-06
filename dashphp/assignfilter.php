@@ -6,6 +6,7 @@
 ?>
 
 <?php
+session_start();
 
 $host= 'localhost';
 $username = 'finalproj_user';
@@ -14,8 +15,11 @@ $dbname = 'dolphin_crm2';
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 $stmt = $conn->query("SELECT * FROM Contacts");
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$stmt2 = $conn->query("SELECT * FROM Users");
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$users = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
 echo("<table>");
   echo("<tr>");
@@ -26,6 +30,7 @@ echo("<table>");
     echo("<th></th>");
   echo("</tr>");
     foreach ($result as $row) {
+      if (($row["assigned_to"] == $users[0]["id"])){
         echo("<tr>");
         echo("<td class=\"contact-name\">".$row["title"]. " " .$row["firstname"]. " " .$row["lastname"]."</td>");
         echo("<td>".$row["email"]."</td>");
@@ -36,8 +41,9 @@ echo("<table>");
         elseif(($row["type"] == "SUPPORT")){
             echo("<td><div class=\"support-type\">".$row["type"]."</div></td>");
         }
-        echo("<td><button id=\"view\">View</button></td>");
+        echo("<td><a href=\"viewContact.php\" id=\"view\">View</a></td>");
         echo("</tr>");
-    }
+      }
+   }
 echo("</table>");
 ?>

@@ -36,7 +36,7 @@ echo("<table>");
         elseif(($row["type"] == "SUPPORT")){
             echo("<td><div class=\"support-type\">".$row["type"]."</div></td>");
         }
-        echo("<td><button id=\"view\">View</button></td>");
+        echo("<td><a href=\"viewContact.php\" id=\"view\">View</a></td>");
         echo("</tr>");
     }
 echo("</table>");
