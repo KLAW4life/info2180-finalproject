@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -94,6 +95,20 @@
                         </div>
                     </div>
                 </main>
+                <?php
+                    session_start();
+                    $host = 'localhost';
+                    $username = 'finalproj_user';
+                    $password = 'password123';
+                    $dbname = 'dolphin_crm2';
+
+                    // $_GET["id"]
+                    $contId = "1";
+                    $userId = $_SESSION["id"];
+                    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+                    $stmt = $conn->query("INSERT INTO Contacts (title,firstname, lastname, email, telephone, company, type, assigned_to, created_by, created_at, updated_at) VALUES ($title, $firstname ,$lastname ,$email, $phone,$company, $type, $user, $userId, getdate());")
+
+                ?>
             </div>
         </div>
         <footer class="footer">
