@@ -50,5 +50,7 @@ CREATE TABLE `Notes`(
 
 ALTER TABLE `Notes` AUTO_INCREMENT=1;
 
+GRANT ALL PRIVILEGES ON dolphin_crm2.* TO 'finalproj_user'@'localhost' IDENTIFIED BY 'password123';
+
 INSERT INTO Users (`firstname`, `lastname`, `password`, `email`, `role`, `created_at`) VALUES ('Yannick','Lyn Fatt', PASSWORD('password123'), 'admin@project2.com', 'Admin', curdate());
 SELECT * FROM `Users`;
