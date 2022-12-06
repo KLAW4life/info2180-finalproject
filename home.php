@@ -7,7 +7,8 @@ $dbname = 'dolphin_crm2';
 
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT title, firstname, lastname, email, company, telephone, assigned_to, created_by, created_at, updated_at FROM Contacts");
+$stmt = $conn->query("SELECT * FROM Contacts");
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -80,16 +81,20 @@ $stmt = $conn->query("SELECT title, firstname, lastname, email, company, telepho
                                         <th></th>
                                     </tr>
                                     <?php
-                                    for ($x=0; $x<=count($stmt); $x++){
-                                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[$x];
-                                        echo '<tr>';
-                                        echo '<td>'. $results['firstname'] $results['lastname'].'</td>';
-                                        echo '<td>'. $results['email'] .'</td>';
-                                        echo '<td>'. $results['company'] .'</td>';
-                                        echo '<td>'. $results['type'] .'</td>';
-                                        echo '<td>' <button id="view1" onclick="viewContact()"> View </button>' </td>';
-                                        echo '</tr>';
-                                    }
+                                        foreach ($result as $row) {
+                                            echo("<tr>");
+                                            echo("<td class=\"contact-name\">".$row["title"]. " " .$row["firstname"]. " " .$row["lastname"]."</td>");
+                                            echo("<td>".$row["email"]."</td>");
+                                            echo("<td>".$row["company"]."</td>");
+                                            if (($row["type"] == "SALES LEAD")){
+                                                echo("<td><div class=\"sales-type\">".$row["type"]."</div></td>");
+                                            }
+                                            elseif(($row["type"] == "SUPPORT")){
+                                                echo("<td><div class=\"support-type\">".$row["type"]."</div></td>");
+                                            }
+                                            echo("<td><a href=\"viewContact.php\" id=\"view\">View</a></td>");
+                                            echo("</tr>");
+                                        }
                                     ?>
 
                                 </table>
