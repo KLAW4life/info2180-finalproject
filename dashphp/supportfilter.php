@@ -26,6 +26,7 @@ echo("<table>");
     echo("<th></th>");
   echo("</tr>");
     foreach ($result as $row) {
+      if (($row["type"] == "SUPPORT")){
         echo("<tr>");
         echo("<td class=\"contact-name\">".$row["title"]. " " .$row["firstname"]. " " .$row["lastname"]."</td>");
         echo("<td>".$row["email"]."</td>");
@@ -36,8 +37,9 @@ echo("<table>");
         elseif(($row["type"] == "SUPPORT")){
             echo("<td><div class=\"support-type\">".$row["type"]."</div></td>");
         }
-        echo("<td><button id=\"view\">View</button></td>");
+        echo("<td><a href=\"viewContact.php\" id=\"view\">View</a></td>");
         echo("</tr>");
+      }
     }
 echo("</table>");
 ?>

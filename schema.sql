@@ -6,7 +6,7 @@ CREATE TABLE `Users`(
 	`id` int NOT NULL AUTO_INCREMENT,
 	`firstname` varchar(25) NOT NULL default '',
 	`lastname` varchar(25) NOT NULL default '',
-	`password` varchar(20) NOT NULL default '',
+	`password` varchar(90) NOT NULL default '',
 	`email` varchar(50) NOT NULL default '',
 	`role` varchar(10) NOT NULL default '',
 	`created_at` datetime,
@@ -49,6 +49,8 @@ CREATE TABLE `Notes`(
 );
 
 ALTER TABLE `Notes` AUTO_INCREMENT=1;
+
+GRANT ALL PRIVILEGES ON dolphin_crm2.* TO 'finalproj_user'@'localhost' IDENTIFIED BY 'password123';
 
 INSERT INTO Users (`firstname`, `lastname`, `password`, `email`, `role`, `created_at`) VALUES ('Yannick','Lyn Fatt', PASSWORD('password123'), 'admin@project2.com', 'Admin', curdate());
 SELECT * FROM `Users`;

@@ -35,15 +35,15 @@ $stmt = $conn->query("SELECT title, firstname, lastname, email, company, telepho
                 <nav>
                     <li class="side-button" id="home-btn">
                         <span class="material-symbols-rounded">home</span>
-                        <p>Home</p>
+                        <a href= "home.php">Home</a>
                     </li>
                     <li class="side-button" id="new-contact-btn">
                         <span class="material-symbols-rounded">person_add</span>
-                        <p>New Contact</p>
+                        <a href= "">New Contact</a>
                     </li>
                     <li class="side-button" id="users-btn">
                         <span class="material-symbols-rounded">group</span>
-                        <p>Users</p>
+                        <a href= "adduser.php">Users</a>
                     </li>
                     <hr>
                     <li class="side-button" id="logout-btn">

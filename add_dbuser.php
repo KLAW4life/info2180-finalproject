@@ -1,8 +1,11 @@
 <?php
-
 session_start();
 
-require 'adduserconfig.php';
+$host= 'localhost';
+$username = 'finalproj_user';
+$password = 'password123';
+$dbname = 'dolphin_crm2';
+
 
 $fname_raw = $lname_raw = $email_raw = $pword_raw = "";
 
@@ -23,14 +26,20 @@ if (isset($_POST['savebtn'])){
 
     $role = $_POST["role"];
 
-    $sql = "INSERT INTO Users (fname, lname, hashpword, email, role, created_at) VALUES(?,?,?,?,?,?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$fname,$lname,$hash_password,$email,$role,date("Y-m-d h:i:s")]);
-    
-    //  Mary
-    // Jane 
-    // mj@gmail.com
-    // D5hjuiyt
+    try {
+      $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+      $sql = $conn->prepare("INSERT INTO Users (firstname, lastname, `password`, email, `role`, created_at) VALUES ($fname, $lname, $hashpword, $email, $role, NOW())");
+      
+      $sql->bindParam(":fname",$fname);
+      $sql->bindParam(":lname",$lname);
+      $sql->bindParam(":hashpword",$hashpword);
+      $sql->bindParam(":email",$email);
+      $sql->bindParam(":role",$role);
+      $sql->execute();
+      echo "New User created successfully";
+    } catch(PDOException $e) {
+      echo $sql . "<br>" . $e->getMessage();
+    }
 }
 
 function filt_input($data) {

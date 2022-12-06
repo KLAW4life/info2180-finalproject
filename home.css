@@ -48,7 +48,6 @@ header img{
 
 .form-group{
     padding: 20px;
-    
 }
 
 .form-group label{
@@ -270,4 +269,8 @@ select{
     justify-content: center;
 }
 
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
 /*Add User Styles*/
