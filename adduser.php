@@ -13,7 +13,7 @@ session_start();
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="adduser.js" type="text/javascript"></script>
+        <!-- <script src="adduser.js" type="text/javascript"></script> -->
     </head>
     <body>
         <header class="headerContainer">
@@ -27,20 +27,20 @@ session_start();
                 <nav>
                     <li class="side-button">
                         <span class="material-symbols-rounded">home</span>
-                        <p>Home</p>
+                        <a href= "home.php">Home</a>
                     </li>
                     <li class="side-button">
                         <span class="material-symbols-rounded">person_add</span>
-                        <p>New Contact</p>
+                        <a href= "">New Contact</a>
                     </li>
                     <li class="side-button">
                         <span class="material-symbols-rounded">group</span>
-                        <p>Users</p>
+                        <a href= "adduser.php">Users</a>
                     </li>
                     <hr>
                     <li class="side-button">
                         <span class="material-symbols-rounded">power_settings_new</span>
-                        <p>Logout</p>
+                        <a href= "logout.php">Logout</a>
                     </li>
                 </nav>
             </div>
