@@ -22,15 +22,15 @@
                 <nav>
                     <li class="side-button" id="home-btn">
                         <span class="material-symbols-rounded">home</span>
-                        <a href= "home.php">Home</a>
+                        <p>Home</p>
                     </li>
                     <li class="side-button" id="new-contact-btn">
                         <span class="material-symbols-rounded">person_add</span>
-                        <a href= "">New Contact</a>
+                        <p>New Contact</p>
                     </li>
                     <li class="side-button" id="users-btn">
                         <span class="material-symbols-rounded">group</span>
-                        <a href= "adduser.php">Users</a>
+                        <p>Users</p>
                     </li>
                     <hr>
                     <li class="side-button" id="logout-btn">
