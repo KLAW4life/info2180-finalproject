@@ -1,5 +1,6 @@
-CREATE DATABASE dolphin_crm2;
-USE dolphin_crm2;
+DROP DATABASE IF EXISTS dolphin_crm;
+CREATE DATABASE dolphin_crm;
+USE dolphin_crm;
 
 CREATE TABLE `Users`(
 	`id` int NOT NULL AUTO_INCREMENT,
