@@ -101,7 +101,6 @@ session_start();
                     </div>
                 </main>
                 <?php
-                    session_start();
                     $host = 'localhost';
                     $username = 'finalproj_user';
                     $password = 'password123';
