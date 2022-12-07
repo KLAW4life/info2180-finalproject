@@ -14,6 +14,26 @@ body{
     background:linear-gradient(to bottom, #7FFFD4, #00FFFF,#003554);
 }
 
+.details p{
+    font-weight: bold;
+}
+
+
+span{
+    display: none;
+}
+
+.continfo{
+    margin-left: 10px;
+}
+
+.continfo p{
+    font-weight: bold;
+}
+
+.continfo h2{
+    font-size: 15px;
+}
 .mainContent {
     display: flex;
 }
@@ -103,7 +123,7 @@ body .viewContainer .buttonsAndProfile{
 }
 .profile img{
     margin-right: 15px;
-    width: 10%
+    width: 12%;
 }
 
 .assign{
@@ -185,8 +205,9 @@ body .viewContainer .buttonsAndProfile{
 }
 
 .viewNotes{
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    margin-left: 10px;
 }
 
 .addNotes{
