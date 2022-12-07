@@ -5,16 +5,16 @@ $username = 'finalproj_user';
 $password = 'password123';
 $dbname = 'dolphin_crm2';
 
-// $_GET["id"]
-$contId = "1";
-// $userId = $_SESSION["id"];
+
+$contId = $_GET["id"];
+$userId = $_SESSION["id"];
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 $stmt = $conn->query("SELECT title, firstname, lastname, email, company, telephone, assigned_to, created_by, created_at, updated_at FROM Contacts WHERE id = $contId");
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
-// $stmt = $conn->query("SELECT created_by, comment FROM Notes WHERE id = $userId");
-// $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
-
-
+$stmt = $conn->query("SELECT firstname, lastname FROM Users WHERE id = $userId");
+$results2 = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+$stmt = $conn->query("SELECT created_by, created_at, comment FROM Notes WHERE created_by = $userId");
+$results3 = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
 
 
 ?>
@@ -65,7 +65,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
                     <img src ="Circle-icons-profile.svg.png" alt = "profileImage">
                     <div class = "continfo">
                         <?php
-                        echo "<p>".$results['title']." ".$results['firstname']. " ".$results['lastname']. "</p>";
+                        echo "<h2>".$results['title']." ".$results['firstname']. " ".$results['lastname']. "</h2>";
                         echo "<p>Created on ".$results['created_at']." by ". $results['created_by']."</p>";
                         echo "<p>Updated on ".$results['updated_at']."</p>";?>
                     </div>
@@ -105,7 +105,10 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
                 </div>
                 <hr>
                 <div class ="viewNotes">
-
+                <?php
+                    echo "<h3>" .$results2['firstname']." ".$results2['lastname']."</h3>";
+                    echo "<p>"  .$results3['comment']. "</p>";
+                    echo "<p>"  .$results3['created_at']."</p>";?>
                 </div>
                 <div class = "addNoteContainer">
                     <div class = "addNotes">
@@ -118,6 +121,10 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
             
         </section>
     </section>
+    <span class ="getUserId">
+    <?php
+        echo "<p>".$results2['userId']."</p>";?>
+    </span>
 </body>
 
 
