@@ -221,10 +221,15 @@ select{
 }
 
 #userListDiv{
+    visibility: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
+}
+
+#checkingR{
+    visibility: hidden;
 }
 
 #userListDiv button{
@@ -240,6 +245,11 @@ select{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    text-decoration: none;
+}
+
+#userListDiv a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
 }
 
 #userListDiv button:hover{

@@ -8,7 +8,9 @@
         <link href="home.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="listUsersScript.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <header class="headerContainer">
@@ -43,9 +45,10 @@
                 <div id="viewUserList">
                     <div id="userListDiv">
                         <h1>Users</h1>
-                        <button id="addUserBtn"><span class="material-symbols-rounded">person_add</span> Add User</button>
+                        <a href="adduser.php"><button id="addUserBtn" ><span class="material-symbols-rounded">person_add</span> Add User</button></a>
                     </div>
                     <div id="userListresult">
+                        <div id ="checkingR"></div>
                         <div id="userListresultspace">
                         </div>
                     </div>
