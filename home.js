@@ -74,7 +74,7 @@ function assigned(){
     })
 }
 
-function newContact(){
+function newContact2(){
     document.getElementById("contact-btn").addEventListener("click", function(event){
         event.preventDefault();
         window.location = "newcontact.php";
@@ -86,5 +86,5 @@ window.addEventListener("DOMContentLoaded", function(){
     salesLeads();
     supports();
     assigned();
-    newContact();
+    newContact2();
 })
