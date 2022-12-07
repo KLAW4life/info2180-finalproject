@@ -29,6 +29,8 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
 
     <link rel="stylesheet" href="viewContact.css">
     <script src="viewContact.js"></script>
+    <script src="sidebar.js" type="text/javascript"></script>
+
 </head>
 <body>
     <section class = "bannerSection"></section>
@@ -40,20 +42,20 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
     <section class = "mainContent">
         <div class="sidebar">
             <nav>
-                <li class="side-button">
+                <li class="side-button" id="home-btn">
                     <span class="material-symbols-rounded">home</span>
                     <p>Home</p>
                 </li>
-                <li class="side-button">
+                <li class="side-button" id="new-contact-btn">
                     <span class="material-symbols-rounded">person_add</span>
                     <p>New Contact</p>
                 </li>
-                <li class="side-button">
+                <li class="side-button" id="users-btn">
                     <span class="material-symbols-rounded">group</span>
                     <p>Users</p>
                 </li>
                 <hr>
-                <li class="side-button">
+                <li class="side-button" id="logout-btn">
                     <span class="material-symbols-rounded">power_settings_new</span>
                     <p>Logout</p>
                 </li>

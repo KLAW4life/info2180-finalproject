@@ -13,7 +13,8 @@ session_start();
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- <script src="adduser.js" type="text/javascript"></script> -->
+        <script src="sidebar.js" type="text/javascript"></script>
+        <script src="adduser.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="headerContainer">
@@ -25,22 +26,22 @@ session_start();
         <div class="main-page">
             <div class="sidebar">
                 <nav>
-                    <li class="side-button">
+                    <li class="side-button" id="home-btn">
                         <span class="material-symbols-rounded">home</span>
-                        <a href= "home.php">Home</a>
+                        <p>Home</p>
                     </li>
-                    <li class="side-button">
+                    <li class="side-button" id="new-contact-btn">
                         <span class="material-symbols-rounded">person_add</span>
-                        <a href= "">New Contact</a>
+                        <p>New Contact</p>
                     </li>
-                    <li class="side-button">
+                    <li class="side-button" id="users-btn">
                         <span class="material-symbols-rounded">group</span>
-                        <a href= "adduser.php">Users</a>
+                        <p>Users</p>
                     </li>
                     <hr>
-                    <li class="side-button">
+                    <li class="side-button" id="logout-btn">
                         <span class="material-symbols-rounded">power_settings_new</span>
-                        <a href= "logout.php">Logout</a>
+                        <p>Logout</p>
                     </li>
                 </nav>
             </div>

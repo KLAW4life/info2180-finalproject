@@ -77,12 +77,7 @@ function assigned(){
 function newContact(){
     document.getElementById("contact-btn").addEventListener("click", function(event){
         event.preventDefault();
-        window.location = "newcontact.html";
-    })
-
-    document.getElementById("new-contact-btn").addEventListener("click", function(event){
-        event.preventDefault();
-        window.location = "newcontact.html";
+        window.location = "newcontact.php";
     })
 }
 
