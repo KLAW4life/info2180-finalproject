@@ -6,8 +6,8 @@ $password = 'password123';
 $dbname = 'dolphin_crm2';
 
 
-$contId = $_GET["id"];
-$userId = $_SESSION["id"];
+$contId = "1";
+$userId = "1";
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 $stmt = $conn->query("SELECT title, firstname, lastname, email, company, telephone, assigned_to, created_by, created_at, updated_at FROM Contacts WHERE id = $contId");
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
@@ -114,7 +114,8 @@ $results3 = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
                 </div>
                 <div class = "addNoteContainer">
                     <div class = "addNotes">
-                        <h3>Add a note about</h3>
+                        <?php
+                        echo "<h3>Add a note about"." ".$results['firstname']." ".$results['lastname']."</h3>";?>
                         <input type="note" placeholder="Enter details here" id = "noteInput">
                         <button class="Add">Add note</button>
                     </div>
