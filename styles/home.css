@@ -274,3 +274,79 @@ a{
     text-decoration: inherit;
 }
 /*Add User Styles*/
+
+/*List User Styles*/
+
+#viewUserList{
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+#userListDiv{
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#checkingR{
+    visibility: hidden;
+}
+
+#userListDiv button{
+    display: flex;
+    align-items: center;
+    background: #67AAF9;
+    color: #F8F4F9;
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-decoration: none;
+}
+
+#userListDiv a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+#userListDiv button:hover{
+    background-color: darkblue;
+}
+
+
+#userListresult{
+    background: #DBD3D8;
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+#uTable{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#uTable td, #uTable th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#uTable tr:nth-child(even){background-color: white;}
+#uTable tr:nth-child(odd){background-color:ghostwhite}
+
+#uTable th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #E8E8E8;
+    color: black;
+}
