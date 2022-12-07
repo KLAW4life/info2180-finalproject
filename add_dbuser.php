@@ -4,7 +4,7 @@ session_start();
 $host= 'localhost';
 $username = 'finalproj_user';
 $password = 'password123';
-$dbname = 'dolphin_crm2';
+$dbname = 'dolphin_crm';
 
 
 $fname_raw = $lname_raw = $email_raw = $pword_raw = "";
