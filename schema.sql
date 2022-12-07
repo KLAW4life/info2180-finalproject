@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS dolphin_crm2;
-CREATE DATABASE dolphin_crm2;
-USE dolphin_crm2;
+DROP DATABASE IF EXISTS dolphin_crm;
+CREATE DATABASE dolphin_crm;
+USE dolphin_crm;
 
 CREATE TABLE `Users`(
 	`id` int NOT NULL AUTO_INCREMENT,
@@ -50,7 +50,7 @@ CREATE TABLE `Notes`(
 
 ALTER TABLE `Notes` AUTO_INCREMENT=1;
 
-GRANT ALL PRIVILEGES ON dolphin_crm2.* TO 'finalproj_user'@'localhost' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON dolphin_crm.* TO 'finalproj_user'@'localhost' IDENTIFIED BY 'password123';
 
 INSERT INTO Users (`firstname`, `lastname`, `password`, `email`, `role`, `created_at`) VALUES ('Yannick','Lyn Fatt', PASSWORD('password123'), 'admin@project2.com', 'Admin', curdate());
 SELECT * FROM `Users`;
