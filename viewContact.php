@@ -27,9 +27,9 @@ $results3 = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin CRM</title>
 
-    <link rel="stylesheet" href="viewContact.css">
-    <script src="viewContact.js"></script>
-    <script src="sidebar.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles/viewContact.css">
+    <script src="scripts/viewContact.js"></script>
+    <script src="scripts/sidebar.js" type="text/javascript"></script>
 
 </head>
 <body>

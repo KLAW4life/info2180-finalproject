@@ -13,6 +13,13 @@ function newContact(){
     })
 }
 
+function users(){
+    document.getElementById("users-btn").addEventListener("click", function(event){
+        event.preventDefault();
+        window.location = "listUsers.php";
+    })
+}
+
 function logOut(){
     document.getElementById("logout-btn").addEventListener("click", function(event){
         event.preventDefault();
@@ -23,5 +30,6 @@ function logOut(){
 window.addEventListener("DOMContentLoaded", function(){
     home();
     newContact();
+    users();
     logOut();
 })

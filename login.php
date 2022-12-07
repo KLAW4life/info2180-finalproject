@@ -9,7 +9,7 @@ session_start(); //session starts here
         <meta name="viewport" git content="width=device-width, initial-scale=1.0">
 
         <title>Dolphin CRM</title>
-        <link href="styles.css" type="text/css" rel="stylesheet" />
+        <link href="styles/styles.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>

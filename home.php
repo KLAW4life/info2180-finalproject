@@ -19,11 +19,11 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dolphin CRM</title>
-        <link href="home.css" type="text/css" rel="stylesheet" />
+        <link href="styles/home.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="home.js" type="text/javascript"></script>
-        <script src="sidebar.js" type="text/javascript"></script>
+        <script src="scripts/home.js" type="text/javascript"></script>
+        <script src="scripts/sidebar.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="headerContainer">
